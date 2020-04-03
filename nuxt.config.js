@@ -23,7 +23,7 @@ export default {
     '@nuxt/typescript-build',
     '@nuxtjs/vuetify',
     '@bazzite/nuxt-optimized-images',
-    '@nuxtjs/google-analytics'
+    '@nuxtjs/gtm'
   ],
   modules: [
     '@nuxtjs/axios',
@@ -32,7 +32,7 @@ export default {
   ],
   axios: {
   },
-  googleAnalytics: {
+  gtm: {
     id: 'G-1VZJQNKNNC'
   },
   optimizedImages: {
