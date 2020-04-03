@@ -1,8 +1,8 @@
 {
   "name": "chattawooga.com",
   "version": "1.0.0",
-  "description": "Chattawooga.com site",
-  "author": "CodeSteele",
+  "description": "A place for all resources for Chattanooga Furs!",
+  "author": "Chattanooga Community Furries",
   "private": true,
   "scripts": {
     "dev": "nuxt",
