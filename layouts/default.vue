@@ -26,8 +26,12 @@
     </v-app>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .v-application {
     background-color: var(--v-background-base) !important;
+}
+
+.v-btn:not(.v-btn--round).v-size--default {
+    height: inherit;
 }
 </style>
