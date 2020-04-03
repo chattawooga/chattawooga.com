@@ -37,6 +37,9 @@ export default {
   optimizedImages: {
     optimizeImages: true
   },
+  sitemap: {
+    hostname: "https://chattawooga.com"
+  },
   server: {
     host: '0.0.0.0'
   },
