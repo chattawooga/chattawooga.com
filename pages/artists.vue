@@ -3,9 +3,11 @@
         <v-subheader class="display-1">
             Artists
         </v-subheader>
-        <div v-for="artist in artists" :key="artist.key">
-            <profile :profile="artist" />
-        </div>
+        <v-row align="center" justify="center">
+            <v-col v-for="artist in artists" :key="artist.key" lg="4" md="6" col="12">
+                <profile :profile="artist" />
+            </v-col>
+        </v-row>
     </v-container>
 </template>
 

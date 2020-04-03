@@ -3,9 +3,11 @@
         <v-subheader class="display-1">
             Chats
         </v-subheader>
-        <div v-for="chat in chats" :key="chat.key">
-            <chat :chat="chat" />
-        </div>
+        <v-row align="center" justify="center">
+            <v-col v-for="chat in chats" :key="chat.key" lg="4" md="6" cols="12">
+                <chat :chat="chat" />
+            </v-col>
+        </v-row>
     </v-container>
 </template>
 

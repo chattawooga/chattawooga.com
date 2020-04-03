@@ -21,13 +21,17 @@ export default {
   ],
   buildModules: [
     '@nuxt/typescript-build',
-    '@nuxtjs/vuetify'
+    '@nuxtjs/vuetify',
+    '@bazzite/nuxt-optimized-images',
   ],
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/pwa'
   ],
   axios: {
+  },
+  optimizedImages: {
+    optimizeImages: true
   },
   server: {
     host: '0.0.0.0'

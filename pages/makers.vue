@@ -3,9 +3,11 @@
         <v-subheader class="display-1">
             Makers
         </v-subheader>
-        <div v-for="maker in makers" :key="maker.key">
-            <profile :profile="maker" />
-        </div>
+        <v-row align="center" justify="center">
+            <v-col v-for="maker in makers" :key="maker.key" lg="4" md="6" cols="12">
+                <profile :profile="maker" />
+            </v-col>
+        </v-row>
     </v-container>
 </template>
 
