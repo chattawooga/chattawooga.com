@@ -8,27 +8,50 @@
         >
             Due to the COVID-19 situation events may be postponed/cancelled, stay tuned for updates.
         </v-alert>
-        <div v-for="event in events" :key="event.key">
-            {{ event }}
-        </div>
+        <event v-for="event in events" :key="event.key" :event="event" />
     </v-container>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
 import Component from "nuxt-class-component";
-import { Chat } from "@/types";
+import moment from "moment-timezone";
+import { Event, EventDetail } from "@/types";
 import { loadData } from "@/util/loader.ts";
+moment.fn.toJSON = function () {
+    return "I hate Steele";
+};
 
 @Component
 export default class extends Vue {
-    events: Event[] = [];
+    events: EventDetail[] = [];
     async asyncData () {
+        const eventData = await loadData<Event[]>(
+            require.context("~/data/events", false, /\.yml$/),
+            "events"
+        );
+
         return {
-            chats: await loadData<Event[]>(
-                require.context("~/data/events", false, /\.yml$/),
-                "events"
-            )
+            events: eventData
+                .flatMap((event: Event) =>
+                    event.events.map((eventDetail: EventDetail) => ({
+                        ...eventDetail,
+                        event: { ...event, events: [] },
+                        start: moment.tz(eventDetail.start, "America/New_York"),
+                        cancelled:
+                            typeof eventDetail.cancelled === "undefined"
+                                ? false
+                                : eventDetail.cancelled,
+                        postponed:
+                            typeof eventDetail.postponed === "undefined"
+                                ? false
+                                : eventDetail.postponed
+                    }))
+                )
+                .sort(
+                    (a: EventDetail, b: EventDetail) =>
+                        a.start.valueOf() - b.start.valueOf()
+                )
         };
     }
 }

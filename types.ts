@@ -1,4 +1,4 @@
-
+import { Moment } from "moment";
 
 export interface Profile {
     name: string;
@@ -25,5 +25,17 @@ export interface Chat {
 }
 
 export interface Event {
+    name: string;
+    location: string;
+    address: string;
+    fursuiting: boolean;
+    about: string
+    events: EventDetail[]
+}
 
+export interface EventDetail {
+    cancelled: boolean;
+    postponed: boolean;
+    start: Moment;
+    event: Event;
 }

@@ -17,7 +17,8 @@ export default {
     { src: "~assets/fonts/icomoon/style.scss" }
   ],
   plugins: [
-    "components"
+    "components",
+    "plugins/filters.ts"
   ],
   buildModules: [
     '@nuxt/typescript-build',
@@ -33,7 +34,8 @@ export default {
   axios: {
   },
   gtm: {
-    id: 'G-1VZJQNKNNC'
+    id: 'G-1VZJQNKNNC',
+    dev: true
   },
   optimizedImages: {
     optimizeImages: true

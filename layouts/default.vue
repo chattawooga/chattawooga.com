@@ -26,6 +26,16 @@
     </v-app>
 </template>
 
+<script lang="ts">
+import Vue from "vue";
+import Component from "nuxt-class-component";
+
+@Component
+export default class extends Vue {
+    mounted () {}
+}
+</script>
+
 <style lang="scss" scoped>
 .v-application {
     background-color: var(--v-background-base) !important;
