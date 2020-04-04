@@ -1,5 +1,5 @@
 import Vue from "vue";
-import { Moment } from "moment-timezone";
+import moment from "moment-timezone";
 
-Vue.filter("date", (val: Moment) => val?.format ? val.format("L") : val);
-Vue.filter("time", (val: Moment) => val?.format ? val.format("LT") : val);
+Vue.filter("date", (val: string) => moment.tz(val, "America/New_York").format("L"));
+Vue.filter("time", (val: string) => moment.tz(val, "America/New_York").format("LT"));

@@ -35,7 +35,6 @@ export default class extends Vue {
                     event.events.map((eventDetail: EventDetail) => ({
                         ...eventDetail,
                         event: { ...event, events: [] },
-                        start: moment.tz(eventDetail.start, "America/New_York"),
                         cancelled:
                             typeof eventDetail.cancelled === "undefined"
                                 ? false
@@ -47,8 +46,8 @@ export default class extends Vue {
                     }))
                 )
                 .sort(
-                    (a: EventDetail, b: EventDetail) =>
-                        a.start.valueOf() - b.start.valueOf()
+                    (a: any, b: any) =>
+                        moment(a.start).valueOf() - moment(b.start).valueOf()
                 )
         };
     }
