@@ -5,6 +5,7 @@
         </v-subheader>
         <v-alert
             type="warning"
+            light
         >
             Due to the COVID-19 situation events may be postponed/cancelled, stay tuned for updates.
         </v-alert>
@@ -18,8 +19,10 @@ import Component from "nuxt-class-component";
 import moment from "moment-timezone";
 import { Event, EventDetail } from "@/types";
 import { loadData } from "@/util/loader.ts";
+
+// @ts-ignore
 moment.fn.toJSON = function () {
-    return "I hate Steele"; // Nuxt seems to be serializing my stuff sometimes? Remove later if I'm good now
+    return this;
 };
 
 @Component
