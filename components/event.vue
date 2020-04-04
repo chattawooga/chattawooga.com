@@ -12,6 +12,7 @@
                 {{
                     event.start | date
                 }}
+                <br>
                 {{ event.start | time }}
             </v-card-title>
 
@@ -83,10 +84,15 @@ export default class extends Vue {
 
 <style lang="scss" scoped>
 $text-border-shadow: #000;
+$negWidth: -2px;
+$width: 2px;
 .v-card__title {
-    text-shadow: -1px -1px 0 $text-border-shadow, 0 -1px 0 $text-border-shadow,
-        1px -1px 0 $text-border-shadow, 1px 0 0 $text-border-shadow,
-        1px 1px 0 $text-border-shadow, 0 1px 0 $text-border-shadow,
-        -1px 1px 0 $text-border-shadow, -1px 0 0 $text-border-shadow;
+    font-size: 1.8em;
+    text-shadow: $negWidth $negWidth 0 $text-border-shadow,
+        0 $negWidth 0 $text-border-shadow,
+        $width $negWidth 0 $text-border-shadow, $width 0 0 $text-border-shadow,
+        $width $width 0 $text-border-shadow, 0 $width 0 $text-border-shadow,
+        $negWidth $width 0 $text-border-shadow,
+        $negWidth 0 0 $text-border-shadow;
 }
 </style>

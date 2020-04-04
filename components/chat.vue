@@ -37,7 +37,7 @@ $text-border-shadow: #000;
 $negWidth: -2px;
 $width: 2px;
 .v-card__title {
-    font-size: 1.3em;
+    font-size: 1.8em;
     text-shadow: $negWidth $negWidth 0 $text-border-shadow,
         0 $negWidth 0 $text-border-shadow,
         $width $negWidth 0 $text-border-shadow, $width 0 0 $text-border-shadow,
