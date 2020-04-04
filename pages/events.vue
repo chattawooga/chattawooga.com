@@ -42,7 +42,11 @@ export default class extends Vue {
                         postponed:
                             typeof eventDetail.postponed === "undefined"
                                 ? false
-                                : eventDetail.postponed
+                                : eventDetail.postponed,
+                        tentative:
+                            typeof eventDetail.tentative === "undefined"
+                                ? false
+                                : eventDetail.tentative
                     }))
                 )
                 .sort(

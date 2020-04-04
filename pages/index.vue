@@ -12,6 +12,11 @@
             <v-col>Welcome to Chattawooga, your resource for local Chattanooga furry resources!</v-col>
             <v-col cols="1" />
         </v-row>
+        <v-row>
+            <v-col cols="1" />
+            <v-col>If you want to find out about artists, makers of all kinds (fursuits, ceramics, and so much more), online chats or events for furries in Chattanooga and the surrounding area, this is the place to look.</v-col>
+            <v-col cols="1" />
+        </v-row>
     </v-container>
 </template>
 

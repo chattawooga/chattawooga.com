@@ -36,6 +36,7 @@ export interface Event {
 export interface EventDetail {
     cancelled: boolean;
     postponed: boolean;
+    tentative: boolean;
     start: Moment;
     event: Event;
 }

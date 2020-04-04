@@ -30,12 +30,19 @@
                 <v-icon>icon-{{ key }}</v-icon>
             </v-btn>
         </v-img>
-        <v-card-text v-if="event.cancelled || event.postponed" class="pb-0">
+        <v-card-text v-if="hasAlert()" class="pb-0">
             <v-alert v-if="event.cancelled" class="mb-0" type="warning">
                 Cancelled
             </v-alert>
             <v-alert v-if="event.postponed" class="mb-0" type="info">
                 Postponed
+            </v-alert>
+            <v-alert
+                v-if="event.tentative"
+                class="mb-0"
+                type="info"
+            >
+                Currently marked as tentative, details may change
             </v-alert>
         </v-card-text>
         <v-card-subtitle>{{ event.event.about }}</v-card-subtitle>
@@ -58,6 +65,12 @@ import { Event, EventDetail } from "@/types";
 @Component
 export default class extends Vue {
     @Prop(Object) readonly event!: EventDetail;
+
+    hasAlert (): boolean {
+        return (
+            this.event.cancelled || this.event.postponed || this.event.tentative
+        );
+    }
 
     getUrl (key: string, value: string): string {
         switch (key) {
