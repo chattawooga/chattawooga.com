@@ -19,7 +19,7 @@ import moment from "moment-timezone";
 import { Event, EventDetail } from "@/types";
 import { loadData } from "@/util/loader.ts";
 moment.fn.toJSON = function () {
-    return "I hate Steele";
+    return "I hate Steele"; // Nuxt seems to be serializing my stuff sometimes? Remove later if I'm good now
 };
 
 @Component

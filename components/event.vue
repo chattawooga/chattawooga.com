@@ -40,7 +40,11 @@
         </v-card-text>
         <v-card-subtitle>{{ event.event.about }}</v-card-subtitle>
         <v-card-title class="pt-0" />
-        <v-card-text>{{ event.event.address }}</v-card-text>
+        <v-card-text>
+            {{ event.event.location }}
+            <br>
+            {{ event.event.address }}
+        </v-card-text>
     </v-card>
 </template>
 
