@@ -20,11 +20,6 @@ import moment from "moment-timezone";
 import { Event, EventDetail } from "@/types";
 import { loadData } from "@/util/loader.ts";
 
-// @ts-ignore
-moment.fn.toJSON = function () {
-    return this;
-};
-
 @Component
 export default class extends Vue {
     events: EventDetail[] = [];
