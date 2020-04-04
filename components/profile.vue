@@ -19,7 +19,7 @@
                     align="center"
                     justify="center"
                 >
-                    <v-btn large :href="getUrl(key, value)" target="_blank">
+                    <v-btn :href="getUrl(key, value)" target="_blank">
                         <v-icon>icon-{{ key }}</v-icon>
                     </v-btn>
                 </v-col>
@@ -48,6 +48,8 @@ export default class extends Vue {
                 return `https://facebook.com/${value}`;
             case "furaffinity":
                 return `https://furaffinity.net/user/${value}`;
+            case "instagram":
+                return `https://instagram.com/${value}/`;
             case "ko-fi":
                 return `https://ko-fi.com/${value}`;
             case "telegram":

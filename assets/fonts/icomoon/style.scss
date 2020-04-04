@@ -2,12 +2,12 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?2dgx7t');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?2dgx7t#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff2?2dgx7t') format('woff2'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?2dgx7t') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?2dgx7t') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?2dgx7t##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?ra1hhp');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?ra1hhp#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff2?ra1hhp') format('woff2'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?ra1hhp') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?ra1hhp') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?ra1hhp##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -28,6 +28,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-instagram {
+  &:before {
+    content: $icon-instagram;     
+    color: #e4405f;
+  }
+}
 .icon-etsy {
   &:before {
     content: $icon-etsy;     
