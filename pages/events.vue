@@ -62,6 +62,18 @@ export default class extends Vue {
         };
     }
 
+    getEvent (event: EventDetail): string {
+        if (event.cancelled) {
+            return "https://schema.org/EventCancelled";
+        }
+
+        if (event.postponed) {
+            return "https://schema.org/EventPostponed";
+        }
+
+        return "https://schema.org/EventScheduled";
+    }
+
     jsonld () {
         return this.events.map((event: EventDetail) => ({
             "@context": "https://schema.org",
@@ -69,7 +81,7 @@ export default class extends Vue {
             startDate: event.start,
             endDate: event.end,
             name: event.event.name,
-            eventStatus: "https://schema.org/EventScheduled",
+            eventStatus: this.getEvent(event),
             description: event.event.about,
             location: {
                 "@type": "Place",
