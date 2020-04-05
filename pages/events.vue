@@ -21,9 +21,11 @@
 import Vue from "vue";
 import Component from "nuxt-class-component";
 import moment from "moment-timezone";
+import { Jsonld } from "nuxt-jsonld";
 import { Event, EventDetail } from "@/types";
 import { loadData } from "@/util/loader.ts";
 
+@Jsonld
 @Component
 export default class extends Vue {
     events: EventDetail[] = [];
@@ -58,6 +60,30 @@ export default class extends Vue {
                         moment(a.start).valueOf() - moment(b.start).valueOf()
                 )
         };
+    }
+
+    jsonld () {
+        return this.events.map((event: EventDetail) => ({
+            "@context": "https://schema.org",
+            "@type": "Event",
+            startDate: event.start,
+            endDate: event.end,
+            name: event.event.name,
+            eventStatus: "https://schema.org/EventScheduled",
+            description: event.event.about,
+            location: {
+                "@type": "Place",
+                name: event.event.location,
+                address: {
+                    "@type": "PostalAddress",
+                    streetAddress: event.event.address.address,
+                    addressLocality: event.event.address.city,
+                    postalCode: event.event.address.postal,
+                    addressRegion: event.event.address.state,
+                    addressCountry: "US"
+                }
+            }
+        }));
     }
 }
 </script>

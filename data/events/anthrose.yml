@@ -1,6 +1,10 @@
 name: Anthro SouthEast
 location: Chattanooga Marriott Downtown and Chattanooga Convention Center
-address: Two Carter Plaza, Chattanooga, TN 37402
+address:
+    address: Two Carter Plaza
+    city: Chattanooga
+    state: TN
+    postal: 37402
 fursuiting: true
 about: 
 social:

@@ -18,7 +18,8 @@ export default {
   ],
   plugins: [
     "components",
-    "plugins/filters.ts"
+    "plugins/filters.ts",
+    "plugins/jsonld.ts"
   ],
   buildModules: [
     '@nuxt/typescript-build',

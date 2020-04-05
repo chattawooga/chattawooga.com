@@ -27,16 +27,24 @@ export interface Chat {
 export interface Event {
     name: string;
     location: string;
-    address: string;
+    address: Address;
     fursuiting: boolean;
     about: string
     events: EventDetail[]
+}
+
+export interface Address {
+    address: string;
+    city: string;
+    postal: string;
+    state: string;
 }
 
 export interface EventDetail {
     cancelled: boolean;
     postponed: boolean;
     tentative: boolean;
-    start: Moment;
+    start: string;
+    end: string;
     event: Event;
 }

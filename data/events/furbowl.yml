@@ -1,6 +1,10 @@
 name: FurBowl
 location: Liesure Time Bowling
-address: 2739 Keith St NW, Cleveland, TN 37312
+address:
+  address: 2739 Keith St NW
+  city: Cleveland
+  state: TN
+  postal: 37312
 fursuiting: true
 about: Arrival is 7 pm, bowling will be at 8:30/9ish pm. Fursuiting is welcomed! Just remember to bowl you can't wear peets.
 social:

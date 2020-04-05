@@ -50,7 +50,7 @@
         <v-card-text>
             {{ event.event.location }}
             <br>
-            {{ event.event.address }}
+            {{ `${event.event.address.address} ${event.event.address.city}, ${event.event.address.state}. ${event.event.address.postal}` }}
         </v-card-text>
     </v-card>
 </template>
