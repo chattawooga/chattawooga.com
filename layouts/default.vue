@@ -47,11 +47,16 @@ export default class extends Vue {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .v-application {
     background-color: var(--v-background-base) !important;
+    a {
+        //color: #fff !important;
+    }
 }
+</style>
 
+<style lang="scss" scoped>
 .v-btn:not(.v-btn--round).v-size--default {
     height: inherit;
 }

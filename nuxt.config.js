@@ -55,6 +55,7 @@ export default {
       themes: {
         dark: {
           background: '#51444d',
+          primary: '#edeced',
           warning: '#ca7100'
         }
       },

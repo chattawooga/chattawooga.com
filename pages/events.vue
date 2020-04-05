@@ -2,7 +2,10 @@
     <v-container>
         <v-banner elevation="12">
             An up-to-date list of all local Chattanooga Furry meetups, conventions, hang-outs, art-jams and any other furry events.
-            <br>Got an event to add? Contact us.
+            <br>Got an event to add?
+            <nuxt-link to="/contactus">
+                Contact us
+            </nuxt-link>
         </v-banner>
         <v-alert
             type="warning"

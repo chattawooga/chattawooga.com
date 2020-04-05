@@ -2,7 +2,10 @@
     <v-container>
         <v-banner elevation="12">
             Here we have a collection of all open Chattanooga furry chats.
-            <br>Got a chat to add? Contact us.
+            <br>Got a chat to add?
+            <nuxt-link to="/contactus">
+                Contact us
+            </nuxt-link>
         </v-banner>
         <v-row align="center" justify="center">
             <v-col v-for="chat in chats" :key="chat.key" lg="4" md="6" cols="12">
