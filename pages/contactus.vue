@@ -16,7 +16,7 @@
                 <v-text-field name="telegram" label="Telegram" />
             </v-col>
             <v-textarea name="comment" label="Comment" />
-            <v-btn class="mr-4" @click="submit">
+            <v-btn type="submit" class="mr-4">
                 Submit
             </v-btn>
         </v-form>
