@@ -32,6 +32,17 @@ import Component from "nuxt-class-component";
 
 @Component
 export default class extends Vue {
+    head () {
+        return {
+            link: [
+                {
+                    rel: "canonical",
+                    href: `https://chattawooga.com${this.$route.path}`
+                }
+            ]
+        };
+    }
+
     mounted () {}
 }
 </script>
