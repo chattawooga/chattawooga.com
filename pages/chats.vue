@@ -1,8 +1,9 @@
 <template>
     <v-container>
-        <v-subheader class="display-1">
-            Chats
-        </v-subheader>
+        <v-banner elevation="12">
+            Here we have a collection of all open Chattanooga furry chats.
+            <br>Got a chat to add? Contact us.
+        </v-banner>
         <v-row align="center" justify="center">
             <v-col v-for="chat in chats" :key="chat.key" lg="4" md="6" cols="12">
                 <chat :chat="chat" />

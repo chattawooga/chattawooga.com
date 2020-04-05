@@ -1,8 +1,9 @@
 <template>
     <v-container>
-        <v-subheader class="display-1">
-            Events
-        </v-subheader>
+        <v-banner elevation="12">
+            An up-to-date list of all local Chattanooga Furry meetups, conventions, hang-outs, art-jams and any other furry events.
+            <br>Got an event to add? Contact us.
+        </v-banner>
         <v-alert
             type="warning"
             light
