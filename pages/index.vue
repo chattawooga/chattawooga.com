@@ -3,7 +3,9 @@
         <v-row>
             <v-col cols="3" />
             <v-col cols="6">
-                <header class="offset-md-3 col-md-6 col-sm-12" />
+                <header class="offset-md-3 col-md-6 col-sm-12">
+                    <v-img :src="require('~/static/images/logo.png')" />
+                </header>
             </v-col>
             <v-col cols="3" />
         </v-row>
@@ -27,9 +29,3 @@ import Component from "nuxt-class-component";
 @Component
 export default class extends Vue {}
 </script>
-
-<style lang="scss">
-header {
-    content: url("~static/images/logo.png?webp");
-}
-</style>

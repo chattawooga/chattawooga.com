@@ -43,7 +43,9 @@ export default {
     id: 'UA-116664525-1'
   },
   optimizedImages: {
-    optimizeImages: true
+    optimizeImages: true,
+    optimizeImagesInDev: false,
+    defaultImageLoader: "webp-loader"
   },
   sitemap: {
     hostname: "https://chattawooga.com",
