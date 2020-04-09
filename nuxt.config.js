@@ -46,9 +46,7 @@ export default {
   },
   sitemap: {
     hostname: "https://chattawooga.com",
-    filter({ routes }) {
-      return routes.map(route => route.url = `${route.url}/`)
-    }
+    trailingSlash: true
   },
   server: {
     host: '0.0.0.0'
