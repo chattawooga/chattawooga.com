@@ -4,7 +4,7 @@
             v-if="event != null"
             class="white--text align-end"
             height="150px"
-            :src="require(`~/static/images/${event.event.type}/${event.event.key}/icon.png`)"
+            :src="require(`~/static/images/${event.event.type}/${event.event.key}/icon.png?webp&resize&sizes[]=200&sizes[]=400&sizes[]=800'`)"
         >
             <v-card-title>
                 {{ event.event.name }}

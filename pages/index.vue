@@ -30,6 +30,6 @@ export default class extends Vue {}
 
 <style lang="scss">
 header {
-    content: url("~static/images/logo.png");
+    content: url("~static/images/logo.png?webp&resize&sizes[]=200&sizes[]=400&sizes[]=800'");
 }
 </style>
