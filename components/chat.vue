@@ -3,7 +3,7 @@
         <v-img
             class="white--text align-end"
             height="150px"
-            :srcset="require(`~/static/images/chats/${chat.key}/icon.png`)"
+            :src="require(`~/static/images/chats/${chat.key}/icon.png`)"
         >
             <v-card-title>
                 {{

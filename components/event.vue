@@ -1,7 +1,6 @@
 <template>
     <v-card class="mx-auto mb-3" max-width="400" shaped>
         <v-img
-            v-if="event != null"
             class="white--text align-end"
             height="150px"
             :src="require(`~/static/images/${event.event.type}/${event.event.key}/icon.png`)"
