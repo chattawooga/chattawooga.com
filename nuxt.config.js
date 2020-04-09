@@ -14,6 +14,7 @@ export default {
   },
   loading: { color: '#fff' },
   css: [
+    { src: "typeface-roboto/index.css" },
     { src: "~assets/fonts/icomoon/style.scss" }
   ],
   plugins: [
@@ -52,6 +53,7 @@ export default {
     host: '0.0.0.0'
   },
   vuetify: {
+    defaultAssets: false,
     theme: {
       dark: true,
       themes: {
