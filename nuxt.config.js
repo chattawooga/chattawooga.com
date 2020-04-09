@@ -45,7 +45,10 @@ export default {
     optimizeImages: true
   },
   sitemap: {
-    hostname: "https://chattawooga.com"
+    hostname: "https://chattawooga.com",
+    filter({ routes }) {
+      return routes.map(route => route.url = `${route.url}/`)
+    }
   },
   server: {
     host: '0.0.0.0'
