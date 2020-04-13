@@ -1,7 +1,7 @@
 <template>
     <v-container>
         <v-banner elevation="12">
-            Here we have a collection of all open Chattanooga furry chats.
+            {{ title }}
             <br>Got a chat to add?
             <nuxt-link to="/contactus">
                 Contact us
@@ -24,12 +24,19 @@ import { loadData } from "@/util/loader.ts";
 @Component
 export default class extends Vue {
     chats: Chat[] = [];
-    async asyncData () {
+    title = "Here we have a collection of all open Chattanooga furry chats.";
+    asyncData () {
         return {
-            chats: await loadData<Chat[]>(
+            chats: loadData<Chat[]>(
                 require.context("~/data/chats", false, /\.yml$/),
                 "chats"
             )
+        };
+    }
+
+    head () {
+        return {
+            title: this.title
         };
     }
 }

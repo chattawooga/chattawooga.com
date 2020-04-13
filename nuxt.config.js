@@ -1,18 +1,18 @@
 
 export default {
-  mode: 'universal',
+  mode: "universal",
   head: {
-    title: 'Chattawooga.com - Your place for Chattanooga Furries',
+    title: "Chattawooga.com - Your place for Chattanooga Furries",
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { hid: "description", name: "description", content: process.env.npm_package_description || "" }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" }
     ]
   },
-  loading: { color: '#fff' },
+  loading: { color: "#fff" },
   css: [
     { src: "typeface-roboto/index.css" },
     { src: "~assets/fonts/icomoon/style.scss" }
@@ -23,24 +23,25 @@ export default {
     "plugins/jsonld.ts"
   ],
   buildModules: [
-    '@nuxt/typescript-build',
-    '@nuxtjs/vuetify',
-    '@bazzite/nuxt-optimized-images',
-    '@nuxtjs/gtm',
-    '@nuxtjs/google-analytics'
+    "@nuxt/typescript-build",
+    "@nuxtjs/vuetify",
+    "@bazzite/nuxt-optimized-images",
+    "@nuxtjs/gtm",
+    "@nuxtjs/google-analytics",
+    "~/buildModules/ical"
   ],
   modules: [
-    '@nuxtjs/axios',
-    '@nuxtjs/pwa',
-    '@nuxtjs/sitemap'
+    "@nuxtjs/axios",
+    "@nuxtjs/pwa",
+    "@nuxtjs/sitemap"
   ],
   axios: {
   },
   gtm: {
-    id: 'GTM-WHBMG7Z'
+    id: "GTM-WHBMG7Z"
   },
   googleAnalytics: {
-    id: 'UA-116664525-1'
+    id: "UA-116664525-1"
   },
   optimizedImages: {
     optimizeImages: true,
@@ -52,7 +53,7 @@ export default {
     trailingSlash: true
   },
   server: {
-    host: '0.0.0.0'
+    host: "0.0.0.0"
   },
   vuetify: {
     defaultAssets: false,
@@ -60,9 +61,9 @@ export default {
       dark: true,
       themes: {
         dark: {
-          background: '#51444d',
-          primary: '#edeced',
-          warning: '#ca7100'
+          background: "#51444d",
+          primary: "#edeced",
+          warning: "#ca7100"
         }
       },
       options: {
@@ -72,10 +73,14 @@ export default {
   },
   build: {
     extend(config, ctx) {
+      config.node = {
+        fs: "empty"
+      };
+
       config.module.rules.push({
         test: /\.ya?ml$/,
-        use: 'js-yaml-loader',
-      })
+        use: "js-yaml-loader",
+      });
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
           enforce: "pre",
@@ -83,7 +88,7 @@ export default {
           loader: "eslint-loader",
           exclude: /(node_modules)/,
           options: { fix: true }
-        })
+        });
       }
     }
   }

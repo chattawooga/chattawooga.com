@@ -24,9 +24,9 @@ import { loadData } from "@/util/loader.ts";
 @Component
 export default class extends Vue {
     makers: Maker[] = [];
-    async asyncData () {
+    asyncData () {
         return {
-            makers: await loadData<Maker[]>(
+            makers: loadData<Maker[]>(
                 require.context("~/data/makers", false, /\.yml$/),
                 "makers"
             )
