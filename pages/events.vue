@@ -13,6 +13,9 @@
         >
             Due to the COVID-19 situation events may be postponed/cancelled, stay tuned for updates.
         </v-alert>
+        <v-btn @click="download">
+            Download
+        </v-btn>
         <event v-for="event in events" :key="event.key" :event="event" />
     </v-container>
 </template>
@@ -22,6 +25,7 @@ import Vue from "vue";
 import Component from "nuxt-class-component";
 import moment from "moment-timezone";
 import { Jsonld } from "nuxt-jsonld";
+import ical from "ical-generator";
 import { Event, EventDetail } from "@/types";
 import { loadData } from "@/util/loader.ts";
 
@@ -29,8 +33,8 @@ import { loadData } from "@/util/loader.ts";
 @Component
 export default class extends Vue {
     events: EventDetail[] = [];
-    async asyncData () {
-        const eventData = await loadData<Event[]>(
+    asyncData () {
+        const eventData = loadData<Event[]>(
             require.context("~/data/events", false, /\.yml$/),
             "events"
         );
@@ -72,6 +76,45 @@ export default class extends Vue {
         }
 
         return "https://schema.org/EventScheduled";
+    }
+
+    getIcal (events: EventDetail[]): string {
+        const cal = ical({
+            name: "Chattawooga Calendar",
+            prodId: { company: "chattawooga.com", product: "ical-generator" },
+            timezone: "America/New_York",
+            domain: "chattawooga.com",
+            url: "https://chattawooga.com/ical/events"
+        });
+        events.forEach((e: EventDetail) =>
+            cal.createEvent({
+                start: moment(e.start),
+                stamp: moment(e.start),
+                end:
+                    e.end === null || e.end === undefined
+                        ? moment(e.start).add(1, "hours")
+                        : moment(e.end),
+                summary: e.event.name
+            })
+        );
+        return cal.toString();
+    }
+
+    download () {
+        const element = document.createElement("a");
+        element.setAttribute(
+            "href",
+            "data:text/plain;charset=utf-8," +
+                encodeURIComponent(this.getIcal(this.events))
+        );
+        element.setAttribute("download", "test.ics");
+
+        element.style.display = "none";
+        document.body.appendChild(element);
+
+        element.click();
+
+        document.body.removeChild(element);
     }
 
     jsonld () {

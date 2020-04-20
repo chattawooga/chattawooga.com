@@ -24,9 +24,9 @@ import { loadData } from "@/util/loader.ts";
 @Component
 export default class extends Vue {
     artists: Artist[] = [];
-    async asyncData () {
+    asyncData () {
         return {
-            artists: await loadData<Artist[]>(
+            artists: loadData<Artist[]>(
                 require.context("~/data/artists", false, /\.yml$/),
                 "artists"
             )
