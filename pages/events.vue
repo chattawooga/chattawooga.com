@@ -37,6 +37,7 @@ export default class extends Vue {
 
         return {
             events: eventData
+                .filter((e: Event) => e.events)
                 .flatMap((event: Event) =>
                     event.events.map((eventDetail: EventDetail) => ({
                         ...eventDetail,

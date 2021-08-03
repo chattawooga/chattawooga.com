@@ -17,6 +17,7 @@ module.exports = {
     "vue/script-indent": [2, 4, {
       switchCase: 1
     }],
-    "vue/html-indent": [2, 4]
+    "vue/html-indent": [2, 4],
+    'vue/no-v-html': 0,
   }
 }

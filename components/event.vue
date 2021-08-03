@@ -6,13 +6,15 @@
             :src="require(`~/static/images/${event.event.type}/${event.event.key}/icon.png`)"
         >
             <v-card-title>
-                {{ event.event.name }}
-                <br>
-                {{
-                    event.start | date
-                }}
-                <br>
-                {{ event.start | time }}
+                <div>{{ event.event.name }}</div>
+                <div v-if="event.text" v-html="$options.filters.newline(event.text)" />
+                <div v-else>
+                    {{
+                        event.start | date
+                    }}
+                    <br>
+                    {{ event.start | time }}
+                </div>
             </v-card-title>
 
             <v-btn
@@ -110,5 +112,8 @@ $width: 2px;
         $width $width 0 $text-border-shadow, 0 $width 0 $text-border-shadow,
         $negWidth $width 0 $text-border-shadow,
         $negWidth 0 0 $text-border-shadow;
+    & > div {
+        width: 100%;
+    }
 }
 </style>

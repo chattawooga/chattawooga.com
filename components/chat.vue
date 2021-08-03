@@ -14,7 +14,10 @@
         <v-card-text>
             <v-card-subtitle>
                 {{ chat.platform }}
-                <a :href="chat.link" target="_blank">{{ chat.link }}</a>
+                <a v-if="chat.link" :href="chat.link" target="_blank">{{ chat.link }}</a>
+                <p v-else>
+                    Get an invite at the <a href="https://t.me/chattawooga" target="_blank">the chattawooga site chat</a>
+                </p>
             </v-card-subtitle>
         </v-card-text>
     </v-card>

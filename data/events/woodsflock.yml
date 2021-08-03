@@ -1,0 +1,14 @@
+name: Woods Flock
+location: Fall Creek Falls State Park, Tennessee, USA
+address:
+  address: 2009 Village Camp Rd
+  city: Spencer
+  state: TN
+  postal: 38585
+fursuiting: true
+about: Some time in spring 2022
+social:
+    twitter: woodsflock
+events:
+    - start: 2022-03-20T00:00
+      text: Spring 2022

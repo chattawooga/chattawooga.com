@@ -46,5 +46,6 @@ export interface EventDetail {
     tentative: boolean;
     start: string;
     end: string;
+    text: string | null;
     event: Event;
 }
