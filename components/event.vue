@@ -46,7 +46,7 @@
                 Currently marked as tentative, details may change
             </v-alert>
         </v-card-text>
-        <v-card-subtitle>{{ event.event.about }}</v-card-subtitle>
+        <v-card-subtitle v-html="event.event.about" />
         <v-card-title class="pt-0" />
         <v-card-text>
             {{ event.event.location }}

@@ -1,0 +1,15 @@
+name: Woods Flock & Friends FallFest
+location: Fall Creek Falls State Park, Tennessee, USA
+address:
+  address: 2009 Village Camp Rd
+  city: Spencer
+  state: TN
+  postal: 38585
+fursuiting: true
+about: Join the telegram chat at <a href="https://t.me/woodsflock">https://t.me/woodsflock</a> for more info
+social:
+    twitter: woodsflock
+events:
+    - start: 2021-10-16T00:00
+      end: 2021-10-17T00:00
+      text: October 16-17
