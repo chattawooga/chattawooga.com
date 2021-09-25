@@ -7,12 +7,6 @@
                 Contact us
             </nuxt-link>
         </v-banner>
-        <v-alert
-            type="warning"
-            light
-        >
-            Due to the COVID-19 situation events may be postponed/cancelled, stay tuned for updates.
-        </v-alert>
         <event v-for="event in events" :key="event.key" :event="event" />
     </v-container>
 </template>
