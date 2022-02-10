@@ -40,7 +40,7 @@
     "lqip-loader": "^2.2.0",
     "moment": "^2.24.0",
     "moment-timezone": "^0.5.28",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "nuxt-jsonld": "^1.4.5",
     "responsive-loader": "^1.2.0",
     "sass-loader": "^8.0.2",
