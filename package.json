@@ -44,7 +44,7 @@
     "nuxt-jsonld": "^1.4.5",
     "responsive-loader": "^1.2.0",
     "sass-loader": "^8.0.2",
-    "sharp": "^0.25.2",
+    "sharp": "^0.30.5",
     "sqip-loader": "^1.0.0",
     "typeface-roboto": "0.0.75",
     "vue-property-decorator": "^8.4.1",
