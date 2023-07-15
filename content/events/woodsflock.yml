@@ -8,7 +8,4 @@ address:
 fursuiting: true
 about: Some time in spring 2022
 social:
-    twitter: woodsflock
-events:
-    - start: 2022-03-20T00:00
-      text: April 1st - 3rd 2022
+  twitter: woodsflock
