@@ -1,5 +1,5 @@
 name: FurBowl
-location: Liesure Time Bowling
+location: Leisure Time Bowling
 address:
   address: 2739 Keith St NW
   city: Cleveland
@@ -8,4 +8,7 @@ address:
 fursuiting: true
 about: Arrival is 7 pm, bowling will be at 8:30/9ish pm. Fursuiting is welcomed! Just remember to bowl you can't wear peets.
 social:
-    twitter: cfurbowl
+  twitter: cfurbowl
+events:
+  - start: 2023-07-29T18:00
+    end: 2023-07-29T23:00

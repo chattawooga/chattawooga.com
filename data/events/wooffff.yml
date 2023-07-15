@@ -8,8 +8,4 @@ address:
 fursuiting: true
 about: Join the telegram chat at <a href="https://t.me/woodsflock">https://t.me/woodsflock</a> for more info
 social:
-    twitter: woodsflock
-events:
-    - start: 2021-10-16T00:00
-      end: 2021-10-17T00:00
-      text: October 16-17
+  twitter: woodsflock
