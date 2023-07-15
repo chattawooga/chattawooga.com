@@ -1,6 +1,5 @@
-import { Moment } from "moment";
-
 export interface Profile {
+    _id: string;
     name: string;
     type: string;
     social: SocialMedia;
@@ -20,6 +19,7 @@ export interface Maker extends Profile {
 }
 
 export interface Chat {
+    _id: string;
     name: string;
     type: string;
 }
